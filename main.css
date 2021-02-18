@@ -1,0 +1,8 @@
+[v-cloak] {
+	display:none;
+}
+
+.item-list {
+  display: inline-block;
+  text-align: left;
+}

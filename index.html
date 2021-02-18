@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <title>Real time search</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  </head>
+
+  <body>
+    <div id="app">
+      <v-app>
+        <v-container>
+          <h1 class="text-center"> Qiita Search</h1>
+          <br>
+          <p class="text-center"><input type="text" v-model="keyword" placeholder=" Vue.js, etc..."></p>
+          <p>{{ message }}</p>
+            <v-card
+              color="blue-lighten"
+              elevation="6"
+              height="550px"
+              width="1200px"
+              >
+              <br>
+              <ul class="item-list-first" style="list-style: none">
+                <li v-for="item in items" class="item-list">
+                  <a v-bind:href="item.url" target="blank">{{ item.title }}</a>
+                  (LGTM：{{item.likes_count}})
+                </li>
+              </ul>
+            </v-card>
+        </v-container>
+      </v-app>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.18.0/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
+    <script src="js/main.js"></script>
+
+  </body>
+</html>
