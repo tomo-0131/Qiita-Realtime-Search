@@ -3,13 +3,12 @@ const app = new Vue ({
   vuetify: new Vuetify(),
   data: {
     items: null,
-    keyword: '',
+    keyword: '' + '',
     message: ''
   },
   // 監視 インプット内の文字変化を監視する
   watch: {
     keyword: function(newKeyword, oldKeyword) {
-      //console.log(newKeyword)
       this.message ='Waiting for you to stop styping...'
       this.debouncedGetAnswer()
     }

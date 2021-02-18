@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
   <head>
-    <title>Real time search</title>
+    <title>Qiita RealTime Search</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
@@ -12,12 +12,26 @@
     <div id="app">
       <v-app>
         <v-container>
-          <h1 class="text-center"> Qiita Search</h1>
+
+          <v-card color="basil" elevation="9">
+            <v-card-title class="text-center justify-center py-3">
+              <h1 class="display-1 basil--text font-weight-light">
+                Qiita Realtime Search
+              </h1>
+            </v-card-title>
+          </v-card>
+          <v-spacer></v-spacer>
+
           <br>
-          <p class="text-center"><input type="text" v-model="keyword" placeholder=" Vue.js, etc..."></p>
-          <p>{{ message }}</p>
+
+          <p class="text-center" py-3>Let's Search !!</p>
+          <p class="text-center">↓</p>
+          <p class="text-center">
+            <input type="text" v-model="keyword" placeholder="Search, Vue.js, etc...">
+          </p>
+          <p class="text-center">{{ message }}</p>
             <v-card
-              color="blue-lighten"
+              color="lighten-grey"
               elevation="6"
               height="550px"
               width="1200px"
@@ -39,6 +53,6 @@
     <script src="https://cdn.jsdelivr.net/npm/axios@0.18.0/dist/axios.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.10/lodash.min.js"></script>
     <script src="js/main.js"></script>
-
+    <script src="js/main.css"></script>
   </body>
 </html>
